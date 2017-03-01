@@ -1,7 +1,7 @@
 {% set name = "Flask" %}
-{% set version = "0.11.1" %}
+{% set version = "0.12" %}
 {% set hash_type = "sha256" %}
-{% set hash = "b4713f2bfb9ebc2966b8a49903ae0d3984781d5c878591cf2f7b484d28756b0e" %}
+{% set hash = "93e803cdbe326a61ebd5c5d353959397c85f829bec610d59cb635c9f97d7ca8b" %}
 
 package:
   name: {{ name|lower }}
@@ -41,13 +41,14 @@ test:
 about:
   home: http://flask.pocoo.org
   license: BSD 3-Clause
+  license_family: BSD
   license_file: LICENSE
   summary: A microframework based on Werkzeug, Jinja2 and good intentions.
   description: |
     Flask is a microframework for Python based on Werkzeug and Jinja2. It's
     intended for getting started very quickly and was developed with best
     intentions in mind.
-  doc_url: http://flask.pocoo.org/docs/0.11
+  doc_url: http://flask.pocoo.org/docs/0.12
   dev_url: https://github.com/pallets/flask
 
 extra:

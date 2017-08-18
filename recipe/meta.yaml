@@ -1,7 +1,7 @@
 {% set name = "Flask" %}
-{% set version = "0.12" %}
+{% set version = "0.12.2" %}
 {% set hash_type = "sha256" %}
-{% set hash = "93e803cdbe326a61ebd5c5d353959397c85f829bec610d59cb635c9f97d7ca8b" %}
+{% set hash = "49f44461237b69ecd901cc7ce66feea0319b9158743dd27a2899962ab214dac1" %}
 
 package:
   name: {{ name|lower }}
@@ -49,8 +49,10 @@ about:
     intended for getting started very quickly and was developed with best
     intentions in mind.
   doc_url: http://flask.pocoo.org/docs/0.12
+  doc_source_url: https://github.com/pallets/flask/blob/master/docs/index.rst
   dev_url: https://github.com/pallets/flask
 
 extra:
   recipe-maintainers:
     - goanpeca
+    - nehaljwani

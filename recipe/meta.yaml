@@ -1,7 +1,7 @@
 {% set name = "Flask" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 {% set hash_type = "sha256" %}
-{% set hash = "cfc15b45622f9cfee6b5803723070fd0f489b3bd662179195e702cb95fd924c8" %}
+{% set hash = "2271c0070dbcb5275fad4a82e29f23ab92682dc45f9dfbc22c02ba9b9322ce48" %}
 
 package:
   name: {{ name|lower }}
@@ -56,3 +56,4 @@ extra:
   recipe-maintainers:
     - goanpeca
     - nehaljwani
+    - ukaratay

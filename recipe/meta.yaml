@@ -13,14 +13,16 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 1
+  script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - flask = flask.cli:main
+  noarch: python
 
 requirements:
   build:
     - python
+    - pip
     - setuptools
 
   run:
@@ -57,3 +59,4 @@ extra:
     - goanpeca
     - nehaljwani
     - ukaratay
+    - marcelotrevisani

@@ -1,7 +1,7 @@
 {% set name = "Flask" %}
-{% set version = "1.0.2" %}
+{% set version = "0.12.4" %}
 {% set hash_type = "sha256" %}
-{% set hash = "2271c0070dbcb5275fad4a82e29f23ab92682dc45f9dfbc22c02ba9b9322ce48" %}
+{% set hash = "2ea22336f6d388b4b242bc3abf8a01244a8aa3e236e7407469ef78c16ba355dd" %}
 
 package:
   name: {{ name|lower }}
@@ -13,8 +13,8 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - flask = flask.cli:main
   noarch: python
@@ -23,14 +23,13 @@ requirements:
   build:
     - python
     - pip
-    - setuptools
 
   run:
     - python
-    - click >=5.1
-    - itsdangerous >=0.24
-    - jinja2 >=2.10
-    - werkzeug >=0.14
+    - click >=2.0
+    - itsdangerous >=0.21
+    - jinja2 >=2.4
+    - werkzeug >=0.7
 
 test:
   imports:

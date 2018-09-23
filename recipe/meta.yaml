@@ -1,7 +1,5 @@
 {% set name = "Flask" %}
 {% set version = "1.0.2" %}
-{% set hash_type = "sha256" %}
-{% set hash = "2271c0070dbcb5275fad4a82e29f23ab92682dc45f9dfbc22c02ba9b9322ce48" %}
 
 package:
   name: {{ name|lower }}
@@ -10,17 +8,17 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash }}
+  sha256: 2271c0070dbcb5275fad4a82e29f23ab92682dc45f9dfbc22c02ba9b9322ce48
 
 build:
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 2
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - flask = flask.cli:main
   noarch: python
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - setuptools

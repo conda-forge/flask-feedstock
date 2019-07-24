@@ -11,7 +11,7 @@ source:
   sha256: 13f9f196f330c7c2c5d7a5cf91af894110ca0215ac051b5844701f2bfd934d52
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - flask = flask.cli:main
@@ -27,8 +27,8 @@ requirements:
     - python
     - click >=5.1
     - itsdangerous >=0.24
-    - jinja2 >=2.10
-    - werkzeug >=0.14
+    - jinja2 >=2.10.1
+    - werkzeug >=0.15
 
 test:
   imports:
@@ -58,3 +58,4 @@ extra:
     - nehaljwani
     - ukaratay
     - marcelotrevisani
+    - xylar

@@ -1,5 +1,5 @@
 {% set name = "Flask" %}
-{% set version = "1.1.2" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4efa1ae2d7c9865af48986de8aeb8504bf32c7f3d6fdc9353d34b21f4b127060
+  sha256: 168e8507792cb8a3aa06afbe5d4d431d3e07c6318bc3893ceecb81aff09f848d
 
 build:
   number: 0
@@ -19,28 +19,30 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
     - setuptools
 
   run:
-    - python
-    - click >=5.1
-    - itsdangerous >=0.24
-    - jinja2 >=2.10.1
-    - werkzeug >=0.15
+    - python >=3.6
+    - click >=7.1.2
+    - itsdangerous >=2.0
+    - jinja2 >=3.0
+    - werkzeug >=2.0
 
 test:
+  requires:
+    - pip
   imports:
     - flask
     - flask.json
-
   commands:
     - flask --help
+    - pip check
 
 about:
   home: http://flask.pocoo.org
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.rst
   summary: A microframework based on Werkzeug, Jinja2 and good intentions.

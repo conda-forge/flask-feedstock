@@ -1,5 +1,5 @@
 {% set name = "Flask" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 168e8507792cb8a3aa06afbe5d4d431d3e07c6318bc3893ceecb81aff09f848d
+  sha256: 1c4c257b1892aec1398784c63791cbaa43062f1f7aeb555c4da961b20ee68f55
 
 build:
   number: 0

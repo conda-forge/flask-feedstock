@@ -1,5 +1,5 @@
 {% set name = "Flask" %}
-{% set version = "2.0.3" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e1120c228ca2f553b470df4a5fa927ab66258467526069981b3eb0a91902687d
+  sha256: c4dd4a3d8fcae9f892e3f61edfbb1d3cdf9ac03dc72ea1bf8d5c6c964a669674
 
 build:
   number: 0
@@ -19,13 +19,15 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools
 
   run:
-    - python >=3.6
-    - click >=7.1.2
+    - python >=3.7
+    - click >=8.0
+    # should be py<310 but we want to keep this noarch: python
+    - importlib-metadata
     - itsdangerous >=2.0
     - jinja2 >=3.0
     - werkzeug >=2.0

@@ -27,7 +27,7 @@ requirements:
     - python >=3.7
     - click >=8.0
     # should be py<310 but we want to keep this noarch: python
-    - importlib-metadata
+    - importlib-metadata  >=3.6.0
     - itsdangerous >=2.0
     - jinja2 >=3.0
     - werkzeug >=2.0

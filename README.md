@@ -1,21 +1,27 @@
 About flask
 ===========
 
-Home: http://flask.pocoo.org
+Home: https://palletsprojects.com/p/flask
 
 Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/flask-feedstock/blob/main/LICENSE.txt)
 
-Summary: A microframework based on Werkzeug, Jinja2 and good intentions.
+Summary: A simple framework for building complex web applications.
 
-Development: https://github.com/pallets/flask
+Development: https://github.com/pallets/flask/
 
-Documentation: http://flask.pocoo.org/docs/1.0/
+Documentation: https://flask.palletsprojects.com/
 
-Flask is a microframework for Python based on Werkzeug and Jinja2. It's
-intended for getting started very quickly and was developed with best
-intentions in mind.
+Flask is a lightweight [WSGI](https://wsgi.readthedocs.io/) web application framework. It is designed
+to make getting started quick and easy, with the ability to scale up to
+complex applications. It began as a simple wrapper around [Werkzeug](https://werkzeug.palletsprojects.com/)
+and [Jinja](https://jinja.palletsprojects.com/) and has become one of the most popular Python web
+application frameworks.
+Flask offers suggestions, but doesn't enforce any dependencies or
+project layout. It is up to the developer to choose the tools and
+libraries they want to use. There are many extensions provided by the
+community that make adding new functionality easy.
 
 
 Current build status

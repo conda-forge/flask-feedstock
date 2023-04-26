@@ -1,11 +1,11 @@
-About flask
-===========
+About flask-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/flask-feedstock/blob/main/LICENSE.txt)
 
 Home: https://palletsprojects.com/p/flask
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/flask-feedstock/blob/main/LICENSE.txt)
 
 Summary: A simple framework for building complex web applications.
 

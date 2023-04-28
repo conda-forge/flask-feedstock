@@ -11,7 +11,7 @@ source:
   sha256: a6059db4297106e5a64b3215fa16ae641822c1cb97ecb498573549b2478602cb
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
     - flask = flask.cli:main

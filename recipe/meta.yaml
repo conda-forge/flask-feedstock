@@ -31,6 +31,8 @@ requirements:
     - itsdangerous >=2.1.2
     - jinja2 >=3.1.2
     - werkzeug >=2.3.0
+    - blinker
+    - markupsafe
 
 test:
   requires:

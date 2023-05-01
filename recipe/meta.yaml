@@ -1,17 +1,16 @@
-{% set name = "Flask" %}
-{% set version = "2.3.1" %}
+{% set name = "flask" %}
+{% set version = "2.3.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a6059db4297106e5a64b3215fa16ae641822c1cb97ecb498573549b2478602cb
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Flask-{{ version }}.tar.gz
+  sha256: 8c2f9abd47a9e8df7f0c3f091ce9497d011dc3b31effcf4c85a6e2b50f4114ef
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
     - flask = flask.cli:main
@@ -24,13 +23,13 @@ requirements:
     - setuptools
 
   run:
-    - python >=3.7
+    - python >=3.8
+    - werkzeug >=2.3.3
+    - jinja2 >=3.1.2
+    - itsdangerous >=2.1.2
     - click >=8.1.3
     # should be py<310 but we want to keep this noarch: python
     - importlib-metadata >=3.6.0
-    - itsdangerous >=2.1.2
-    - jinja2 >=3.1.2
-    - werkzeug >=2.3.0
     - blinker >=1.6.2
 
 test:

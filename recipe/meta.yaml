@@ -1,13 +1,13 @@
 {% set name = "flask" %}
-{% set version = "2.3.2" %}
+{% set version = "2.3.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Flask-{{ version }}.tar.gz
-  sha256: 8c2f9abd47a9e8df7f0c3f091ce9497d011dc3b31effcf4c85a6e2b50f4114ef
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flask-{{ version }}.tar.gz
+  sha256: 09c347a92aa7ff4a8e7f3206795f30d826654baf38b873d0744cd571ca609efc
 
 build:
   number: 0
@@ -18,13 +18,14 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
+    - flit-core <4
     - pip
     - setuptools
 
   run:
     - python >=3.8
-    - werkzeug >=2.3.3
+    - werkzeug >=2.3.7
     - jinja2 >=3.1.2
     - itsdangerous >=2.1.2
     - click >=8.1.3

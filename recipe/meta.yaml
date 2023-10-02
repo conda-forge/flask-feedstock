@@ -1,17 +1,16 @@
-{% set name = "flask" %}
 {% set version = "3.0.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: flask
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flask-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/f/flask/flask-{{ version }}.tar.gz
   sha256: cfadcdb638b609361d29ec22360d6070a77d7463dcb3ab08d2c2f2f168845f58
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-cache-dir --no-build-isolation
   entry_points:
     - flask = flask.cli:main
   noarch: python
@@ -21,11 +20,9 @@ requirements:
     - python >=3.8
     - flit-core <4
     - pip
-    - setuptools
-
   run:
     - python >=3.8
-    - werkzeug >=2.3.7
+    - werkzeug >=3.0.0
     - jinja2 >=3.1.2
     - itsdangerous >=2.1.2
     - click >=8.1.3

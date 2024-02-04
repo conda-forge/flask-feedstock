@@ -1,5 +1,5 @@
 {% set name = "flask" %}
-{% set version = "3.0.1" %}
+{% set version = "3.0.2" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flask-{{ version }}.tar.gz
-  sha256: 6489f51bb3666def6f314e15f19d50a1869a19ae0e8c9a3641ffe66c77d42403
+  sha256: 822c03f4b799204250a7ee84b1eddc40665395333973dfb9deebfe425fefcb7d
 
 build:
   number: 0

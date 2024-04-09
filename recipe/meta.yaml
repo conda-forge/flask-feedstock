@@ -1,5 +1,5 @@
 {% set name = "flask" %}
-{% set version = "3.0.2" %}
+{% set version = "3.0.3" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flask-{{ version }}.tar.gz
-  sha256: 822c03f4b799204250a7ee84b1eddc40665395333973dfb9deebfe425fefcb7d
+  sha256: ceb27b0af3823ea2737928a4d99d125a06175b8512c445cbd9a9ce200ef76842
 
 build:
   number: 0
@@ -45,7 +45,7 @@ about:
   home: https://palletsprojects.com/p/flask
   license: BSD-3-Clause
   license_family: BSD
-  license_file: LICENSE.rst
+  license_file: LICENSE.txt
   summary: A simple framework for building complex web applications.
   description: |
     Flask is a lightweight [WSGI](https://wsgi.readthedocs.io/) web application framework. It is designed

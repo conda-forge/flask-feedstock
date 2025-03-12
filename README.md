@@ -43,6 +43,8 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-flask-green.svg)](https://anaconda.org/conda-forge/flask) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/flask.svg)](https://anaconda.org/conda-forge/flask) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/flask.svg)](https://anaconda.org/conda-forge/flask) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/flask.svg)](https://anaconda.org/conda-forge/flask) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-flask--with--async-green.svg)](https://anaconda.org/conda-forge/flask-with-async) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/flask-with-async.svg)](https://anaconda.org/conda-forge/flask-with-async) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/flask-with-async.svg)](https://anaconda.org/conda-forge/flask-with-async) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/flask-with-async.svg)](https://anaconda.org/conda-forge/flask-with-async) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-flask--with--dotenv-green.svg)](https://anaconda.org/conda-forge/flask-with-dotenv) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/flask-with-dotenv.svg)](https://anaconda.org/conda-forge/flask-with-dotenv) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/flask-with-dotenv.svg)](https://anaconda.org/conda-forge/flask-with-dotenv) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/flask-with-dotenv.svg)](https://anaconda.org/conda-forge/flask-with-dotenv) |
 
 Installing flask
 ================
@@ -54,16 +56,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `flask` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `flask, flask-with-async, flask-with-dotenv` can be installed with `conda`:
 
 ```
-conda install flask
+conda install flask flask-with-async flask-with-dotenv
 ```
 
 or with `mamba`:
 
 ```
-mamba install flask
+mamba install flask flask-with-async flask-with-dotenv
 ```
 
 It is possible to list all of the versions of `flask` available on your platform with `conda`:

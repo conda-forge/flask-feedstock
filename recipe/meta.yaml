@@ -10,10 +10,7 @@ source:
   sha256: 5f873c5184c897c8d9d1b05df1e3d01b14910ce69607a117bd3277098a5836ac
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  entry_points:
-    - flask = flask.cli:main
+  number: 1
   noarch: python
 
 requirements:
@@ -23,24 +20,38 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - werkzeug >=3.1
-    - jinja2 >=3.1.2
-    - itsdangerous >=2.2
-    - click >=8.1.3
-    - blinker >=1.9
-    # should be py<310 but we want to keep this noarch: python
-    - importlib-metadata >=3.6
 
-test:
-  requires:
-    - python {{ python_min }}
-    - pip
-  imports:
-    - flask
-    - flask.json
-  commands:
-    - flask --help
-    - pip check
+outputs:
+  - name: {{ name }}
+    build:
+      script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+      noarch: python
+
+    requirements:
+      host:
+        - python {{ python_min }}
+        - flit-core <4
+        - pip
+      run:
+        - python >={{ python_min }}
+        - werkzeug >=3.1
+        - jinja2 >=3.1.2
+        - itsdangerous >=2.2
+        - click >=8.1.3
+        - blinker >=1.9
+        # should be py<310 but we want to keep this noarch: python
+        - importlib-metadata >=3.6
+
+    test:
+      requires:
+        - python {{ python_min }}
+        - pip
+      imports:
+        - flask
+        - flask.json
+      commands:
+        - flask --help
+        - pip check
 
 about:
   home: https://palletsprojects.com/p/flask

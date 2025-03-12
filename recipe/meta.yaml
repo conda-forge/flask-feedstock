@@ -53,6 +53,46 @@ outputs:
         - flask --help
         - pip check
 
+  - name: {{ name }}-with-async
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python {{ python_min }}
+      run:
+        - python >={{ python_min }}
+        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+        - asgiref >=3.2
+    test:
+      requires:
+        - pip
+        - python {{ python_min }}
+      imports:
+        - flask
+        - asgiref.sync
+      commands:
+        - pip check
+
+  - name: {{ name }}-with-dotenv
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python {{ python_min }}
+      run:
+        - python >={{ python_min }}
+        - {{ pin_subpackage(name, max_pin='x.x.x.x.x.x') }}
+        - python-dotenv
+    test:
+      requires:
+        - pip
+        - python {{ python_min }}
+      imports:
+        - flask
+        - dotenv
+      commands:
+        - pip check
+
 about:
   home: https://palletsprojects.com/p/flask
   license: BSD-3-Clause

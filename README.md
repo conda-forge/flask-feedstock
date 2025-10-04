@@ -163,6 +163,4 @@ Feedstock Maintainers
 * [@goanpeca](https://github.com/goanpeca/)
 * [@marcelotrevisani](https://github.com/marcelotrevisani/)
 * [@nehaljwani](https://github.com/nehaljwani/)
-* [@ukaratay](https://github.com/ukaratay/)
 * [@xylar](https://github.com/xylar/)
-

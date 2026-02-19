@@ -23,7 +23,6 @@ project layout. It is up to the developer to choose the tools and
 libraries they want to use. There are many extensions provided by the
 community that make adding new functionality easy.
 
-
 Current build status
 ====================
 
